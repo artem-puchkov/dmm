@@ -19,7 +19,11 @@ const slashStyle = {
     marginRight: 0.9
 }
 
-export function Header() {
+interface HeaderProps {
+    handleRegisterOpen: () => void
+}
+
+export function Header({ handleRegisterOpen }: HeaderProps) {
     return (
         <AppBar
             elevation={0}
@@ -41,7 +45,7 @@ export function Header() {
                     <Button sx={buttonStyles} disableRipple>Контакты</Button>
                 </Box>
                 <Box display={"flex"}>
-                    <Button sx={buttonStyles}>Регистрация</Button>
+                    <Button sx={buttonStyles} onClick={handleRegisterOpen} >Регистрация</Button>
                     <Typography sx={slashStyle}>/</Typography>
                     <Button sx={buttonStyles}>Вход</Button>
                 </Box>

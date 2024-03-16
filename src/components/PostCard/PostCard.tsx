@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 export function PostCard() {
@@ -13,6 +13,8 @@ export function PostCard() {
                       backgroundColor: "#ffffff", 
                       borderRadius: 5}}>
                 <AccountCircleIcon style={{color: "#1414b8"}}/>
+                <Typography>{post.username}</Typography>
+                <Typography>{}</Typography>
             </Box>
         </Box>
     );
